@@ -23,7 +23,7 @@ function Navbar() {
       <img
         src={logo}
         alt="product-logo"
-        style={{ height: "5.625rem", width: "25.375rem", cursor: "pointer", marginLeft: "1rem" }}
+        style={{ height: "5.625rem", width: "25.375rem", cursor: "pointer"}}
       />
       <div className="navbar-elements">
         <div className="navbar-dropdown" onClick={changeVisibility1} onMouseLeave={()=>setVisibility1(false)}>
@@ -72,7 +72,7 @@ function Navbar() {
           )}
         </div>
         <p>Login</p>
-        <div className="btn">Sign up</div>
+        <button  className="btn">Sign up</button>
       </div>
     </div>
   );

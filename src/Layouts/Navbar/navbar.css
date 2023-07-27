@@ -4,9 +4,9 @@ p {
 
 .navbar {
     display: flex;
-    width: 100vw;
-    padding: .625rem 0rem .625rem 0rem;
-    align-items: center;
+    /* width: 100vw; */
+    justify-content: space-between;
+    padding: .3125rem 0rem;
     background-color: #2A2A2A;
     color: white;
 }
@@ -14,13 +14,11 @@ p {
 .navbar-elements {
     display: flex;
     gap: 3rem;
-    margin-left: 34.375rem;
     align-items: center;
+    padding-right: 5rem;
 }
 
 .navbar-dropdown {
-    justify-content: center;
-    align-items: center;
     gap: .3125rem;
 }
 
@@ -70,14 +68,11 @@ p {
 }
 
 .btn {
-    display: flex;
     height: 2rem;
     width: 6rem;
     padding: 0 0.30rem;
     border-radius: .5rem;
     background-color: white;
     color: black;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
 }

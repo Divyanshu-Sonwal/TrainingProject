@@ -1,0 +1,18 @@
+.features {
+  /* width: 100vw; */
+  background: #2a2a2a;
+  backdrop-filter: blur(50px);
+  color: white;
+}
+
+.flash-card-features {
+  min-height: 381px;
+  max-width: 480px;
+  padding-top: 5rem;
+  padding-left: 1rem;
+  line-height: 1.4125rem;
+}
+
+.flash-card-features > p {
+  font-size: 0.9375rem;
+}
