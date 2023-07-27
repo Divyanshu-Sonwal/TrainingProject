@@ -31,6 +31,15 @@
     0px 191px 76px 0px rgba(0, 0, 0, 0.01), 0px 298px 84px 0px rgba(0, 0, 0, 0);
 }
 
+.features-text-box {
+  height: 9rem;
+  width: 35rem;
+}
+
+.features-text-box h4 {
+  text-align: center;
+}
+
 .start-btn {
   display: flex;
   font-size: 1.2rem;
@@ -115,6 +124,10 @@
 .box-container > h4 {
   margin-bottom: 0.625rem;
   text-align: center;
+}
+
+.box-container img {
+  cursor: pointer;
 }
 
 .filler-rectangle {
