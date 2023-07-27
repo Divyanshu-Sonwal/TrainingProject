@@ -4,6 +4,7 @@ import FactCardIcon from "../../assets/factCard.svg";
 import QuestionCardIcon from "../../assets/questionIcon.svg";
 import PracticeCardIcon from "../../assets/practiceCard.svg";
 import AnswerCardIcon from "../../assets/AnswerCard.svg";
+// import EllipseBackground from "../../assets/Ellipse 14.png";
 
 const Features = () => {
   return (
@@ -28,15 +29,19 @@ const Features = () => {
             <li>fermentum magnis malesuada. Nulla.</li>
           </ul>
         </div>
-        <div style={{ paddingTop: "7rem" }}>
-          <img src={FactCardIcon} alt="FactCardIcon" />
+        <div>
+          <img
+            className="flash-card-img"
+            src={FactCardIcon}
+            alt="FactCardIcon"
+          />
           <button className="start-btn">Start Learning</button>
         </div>
       </div>
 
       <div style={{ display: "flex", justifyContent: "space-around" }}>
-        <div style={{ paddingTop: "7rem" }}>
-          <img src={QuestionCardIcon} alt="QuestionCardIcon" />
+        <div style={{ paddingTop: "3rem" }}>
+          <img className="quiz-card-img" src={QuestionCardIcon} alt="QuestionCardIcon" />
           <button className="start-btn">Start Learning</button>
         </div>
         <div className="flash-card-features">
@@ -88,14 +93,14 @@ const Features = () => {
           </ul>
         </div>
         <div style={{ paddingTop: "7rem" }}>
-          <img src={PracticeCardIcon} alt="PracticeCardIcon" />
+          <img className="practiceQn-card-img" src={PracticeCardIcon} alt="PracticeCardIcon" />
           <button className="start-btn">Start Practicing</button>
         </div>
       </div>
 
       <div style={{ display: "flex", justifyContent: "space-around" }}>
         <div style={{ paddingTop: "7rem" }}>
-          <img src={AnswerCardIcon} alt="AnswerCardIcon" />
+          <img className="interviewQn-card-img" src={AnswerCardIcon} alt="AnswerCardIcon" />
           <button className="start-btn">Start Answering</button>
         </div>
         <div className="flash-card-features">

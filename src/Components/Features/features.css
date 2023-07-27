@@ -16,3 +16,50 @@
 .flash-card-features > p {
   font-size: 0.9375rem;
 }
+
+/* Background Effect on Card Images */
+
+.flash-card-img {
+  position: relative;
+  height: 25rem;
+  max-width: 28.125rem;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 255, 0, 0.5) 0%,
+    transparent 70%
+  );
+  overflow: "hidden"; /* Ensure that the content is clipped to the rounded shape */
+}
+
+.quiz-card-img {
+  position: relative;
+  height: 25rem;
+  max-width: 28.125rem;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(63, 197, 226, 0.4) 0%,
+    transparent 74%
+  );
+  overflow: "hidden"; /* Ensure that the content is clipped to the rounded shape */
+}
+
+.practiceQn-card-img {
+  position: relative;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(178, 176, 247, 0.40) 30%,
+    transparent 72%
+  );
+  overflow: "hidden"; /* Ensure that the content is clipped to the rounded shape */
+}
+
+.interviewQn-card-img {
+  position: relative;
+  height: 12rem;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(43, 38, 192, 0.40) 50%,
+    transparent 75%
+  );
+  overflow: "hidden"; /* Ensure that the content is clipped to the rounded shape */
+}
