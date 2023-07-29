@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./hero.css";
 import FlashLaptopIcon from "../../assets/laptop.svg";
 import QuizLaptopIcon from "../../assets/Frame 2166.svg";
@@ -16,7 +16,15 @@ import InterviewQnBox2 from "../../assets/interviewQnBox.svg";
 // import RightBackground from "../../assets/Rectangle 587.png";
 
 function Hero() {
-  const [imgSrc, setImgSrc] = useState("flash-card");
+  const [imgSrc, setImgSrc] = useState("");
+
+  const imgRef = useRef(imgSrc);
+  imgRef.current = imgSrc;
+
+  useEffect(() => {
+    setImgSrc("flash-card");
+  }, []);
+
   const cardsArr = [
     {
       title: "flash-card",
@@ -52,6 +60,38 @@ function Hero() {
     },
   ];
 
+  // Cards Animation
+
+  // for (let i = 0; i < cardsArr.length; i++) {
+  //     animation(i);
+  // }
+
+  // useEffect(() => {
+  //   function animation(i){
+  //     setTimeout(() => {
+  //       setImgSrc(cardsArr[i].title);
+  //     }, 1000);
+  //   }
+  // }, []);
+
+  // useEffect(() => {
+  //   const delayedLoop = async (delay) => {
+  //     for (let i = 0; i < cardsArr.length; i++) {
+  //       await new Promise(resolve => setTimeout(resolve, delay));
+  //       setImgSrc(cardsArr[i].title);
+  //     }
+  //   };
+
+  //   delayedLoop(1000);
+
+  //   // Make sure to clean up the loop if the component unmounts before the loop finishes
+  //   return () => {
+  //     // Perform any cleanup or cancellation here if needed
+  //   };
+  // }, []);
+
+
+
   useEffect(() => {
     const txts = document.querySelector(".animate-text").children;
     const txtsLen = txts.length;
@@ -81,7 +121,7 @@ function Hero() {
   }, []);
 
   return (
-    <div className="flash-page">
+    <div className="flash-page" style={{paddingBottom:'2rem'}}>
       <div className="heading" style={{ paddingTop: "2rem" }}>
         {/* Mobile headings -> only need to be displayed in mobile screen */}
         <p className="mobile-heading">Empower Your Product</p>
@@ -102,7 +142,7 @@ function Hero() {
           <span style={{ color: "#FD443A" }}>Interview Questions</span>
         </p>
       </div>
-      <button type="button" className="start-btn">
+      <button type="button" className="all-mobile-btn start-btn get-started-btn">
         Get Started
       </button>
       <div className="mid-text" style={{ paddingTop: "0.75rem" }}>
@@ -113,7 +153,9 @@ function Hero() {
 
         {/* Desktop heading -> need to be displayed other than mobile screens */}
         <p className="desktop-heading">Ready to Supercharge Your Product</p>
-        <p className="desktop-heading">Management? Discover the Power of Our Learning</p>
+        <p className="desktop-heading">
+          Management? Discover the Power of Our Learning
+        </p>
 
         <p>Modules!</p>
       </div>
@@ -196,8 +238,12 @@ function Hero() {
         </div>
       </div>
 
+      <button type="button" className="start-btn get-started-btn get-started-end-btn">
+        <a href={`#${imgSrc}`} style={{textDecoration:"none", color:"black"}}>Get Started</a>
+      </button>
+
       {/* Filler Div for BackgroundColor */}
-      <div className="filler-rectangle"></div>
+      {/* <div className="filler-rectangle"></div> */}
     </div>
   );
 }

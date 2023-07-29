@@ -160,7 +160,7 @@ const Features = () => {
 
       {/* This features section will be displayed in Desktop screen. */}
       <div className="desktop-features">
-        <div className="desktop-features-section">
+        <div id="flash-card" className="desktop-features-section">
           <div className="flash-card-features">
             <h2>Flash Cards</h2>
             <p>
@@ -180,7 +180,7 @@ const Features = () => {
               <li>fermentum magnis malesuada. Nulla.</li>
             </ul>
           </div>
-          <div style={{ paddingTop: "3rem" }}>
+          <div className="flash-card-img-container" >
             <img
               className="flash-card-img"
               src={FactCardIcon}
@@ -190,8 +190,8 @@ const Features = () => {
           </div>
         </div>
 
-        <div style={{ display: "flex", justifyContent: "space-around" }}>
-          <div style={{ paddingTop: "3rem" }}>
+        <div id="quiz-card" style={{ display: "flex", justifyContent: "space-around" }}>
+          <div className="quiz-card-img-container">
             <img
               className="quiz-card-img"
               src={QuestionCardIcon}
@@ -221,6 +221,7 @@ const Features = () => {
         </div>
 
         <div
+          id="practiceQn-card" 
           style={{
             display: "flex",
             justifyContent: "space-evenly",
@@ -246,7 +247,7 @@ const Features = () => {
               <li>fermentum magnis malesuada. Nulla.</li>
             </ul>
           </div>
-          <div style={{ paddingTop: "7rem" }}>
+          <div className="practice-Qn-card-img-container">
             <img
               className="practice-Qn-card-img"
               src={PracticeCardIcon}
@@ -256,8 +257,8 @@ const Features = () => {
           </div>
         </div>
 
-        <div style={{ display: "flex", justifyContent: "space-around" }}>
-          <div style={{ paddingTop: "7rem" }}>
+        <div id="interviewQn-card" style={{ display: "flex", justifyContent: "space-around" }}>
+          <div className="interview-Qn-card-img-container">
             <img
               className="interview-Qn-card-img"
               src={AnswerCardIcon}
@@ -266,7 +267,7 @@ const Features = () => {
             <button className="start-btn">Coming Soon</button>
           </div>
           <div className="flash-card-features">
-            <h2>Interview Questions</h2>
+            <h2 >Interview Questions</h2>
             <p>
               Dive into Past Interview Questions to Excel in Product Management.
               Explore a comprehensive collection of previous interview questions

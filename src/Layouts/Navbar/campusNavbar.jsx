@@ -104,7 +104,7 @@ function CampusNavbar() {
         <img
           src={logo}
           alt="product-logo"
-          style={{ height: "5.625rem", width: "25.375rem", cursor: "pointer" }}
+          className="product-logo"
         />
         <div className="navbar-elements">
           <div
@@ -112,8 +112,8 @@ function CampusNavbar() {
             onClick={changeVisibility1}
             onMouseLeave={() => setVisibility1(false)}
           >
-            <p>
-              Learn <img src={dropDownIcon} alt="dropDownIcon" />
+            <p className="learn-text">
+              Learn <img className="learn-img" src={dropDownIcon} alt="dropDownIcon" />
             </p>
             {visibility1 && (
               <div className="learn-dropdown">
@@ -133,9 +133,9 @@ function CampusNavbar() {
             onClick={changeVisibility2}
             onMouseLeave={() => setVisibility2(false)}
           >
-            <p>Practice</p>
+            <p className="learn-text">Practice</p>
           </div>
-          <p>Login</p>
+          <p className="login-text">Login</p>
           <div>
             <button className="btn">Sign up</button>
             {popup && (

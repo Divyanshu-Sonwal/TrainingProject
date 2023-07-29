@@ -17,36 +17,89 @@
 
 .flash-card-features {
   min-height: 23.8125rem;
-  max-width: 30rem;
-  padding-top: 5rem;
-  padding-left: 1rem;
+  max-width: 32rem;
+  padding: 5rem 1.7rem 0.3rem 2.3rem;
+  /* padding-top: 5rem; */
   line-height: 1.4125rem;
   overflow: hidden;
 }
 
+.flash-card-features h2 {
+  font-family: "Poppins", sans-serif;
+  color: #d9d9d9;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.flash-card-features h3 {
+  font-family: "Inter", sans-serif;
+  color: #d9d9d9;
+  font-style: normal;
+  font-weight: 700;
+}
+
 .flash-card-features > p {
-  font-size: 0.9375rem;
+  /* font-size: 0.9375rem; */
   word-wrap: break-word;
+  font-family: "Hind", sans-serif;
+  color: #d9d9d9;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.flash-card-features li {
+  font-size: 1rem;
+  font-family: "Hind", sans-serif;
+  color: #d9d9d9;
 }
 
 /* Background Effect on Card Images */
 
+.flash-card-img-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 6rem;
+  justify-content: center;
+}
+
+.quiz-card-img-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 6rem;
+  justify-content: center;
+}
+
+.practice-Qn-card-img-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5rem;
+  justify-content: center;
+}
+
+.interview-Qn-card-img-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 7rem;
+}
+
 .flash-card-img {
   position: relative;
-  height: 25rem;
+  height: 20rem;
   width: 28.125rem;
   max-width: 100%;
   background: radial-gradient(
     ellipse at center,
     rgba(0, 255, 0, 0.5) 0%,
-    transparent 70%
+    transparent 75%
   );
   overflow: "hidden"; /* Ensure that the content is clipped to the rounded shape */
 }
 
 .quiz-card-img {
   position: relative;
-  height: 25rem;
+  height: 18rem;
   width: 28.125rem;
   max-width: 100%;
   background: radial-gradient(
@@ -71,7 +124,7 @@
 
 .interview-Qn-card-img {
   position: relative;
-  height: 12rem;
+  height: 13rem;
   max-width: 100%;
   background: radial-gradient(
     ellipse at center,
@@ -79,18 +132,19 @@
     transparent 75%
   );
   overflow: "hidden"; /* Ensure that the content is clipped to the rounded shape */
+  margin-bottom: 1.5rem;
 }
 
 h2 {
   font-size: 2.2rem;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   margin-bottom: 0rem;
   font-weight: 500;
 }
 
 h3 {
   font-size: 1.5625rem;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   margin-bottom: 0rem;
   font-weight: 500;
 }
@@ -101,8 +155,14 @@ li {
 
 /* For Mobile Screen */
 .mobile-heading-container {
+  padding: 2rem 1rem 0rem;
   text-align: center;
   display: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 .mobile-features {
@@ -112,7 +172,7 @@ li {
 .mobile-heading-container p {
   margin: 0;
   font-size: 2.1875rem;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
 }
 
 .card-section {
@@ -143,13 +203,18 @@ li {
 }
 
 /* Responsiveness */
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 768px) {
   .desktop-features {
     display: none;
   }
 
   .mobile-features {
     display: block;
+  }
+
+  .flash-card-heading-section h2 {
+    line-height: normal;
+    font-size: 1.875rem;
   }
 
   .mobile-heading-container {
@@ -169,10 +234,10 @@ li {
   .practice-Qn-card-img {
     width: 24rem;
     background: radial-gradient(
-    ellipse at center,
-    rgba(178, 176, 247, 0.4) 20%,
-    transparent 72%
-  );
+      ellipse at center,
+      rgba(178, 176, 247, 0.4) 20%,
+      transparent 72%
+    );
   }
 
   .interview-Qn-card-img {
@@ -185,8 +250,10 @@ li {
   } */
 
   .start-btn {
-    width: 15rem;
-    font-size: 1.5rem;
+    width: 10rem;
+    font-size: 1.2rem;
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 
@@ -218,5 +285,133 @@ li {
 
   li {
     font-size: 0.7188rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1300px) {
+  .flash-card-img {
+    width: 25rem;
+  }
+
+  .quiz-card-img {
+    width: 25rem;
+  }
+
+  .practice-Qn-card-img {
+    height: 20rem;
+    width: 34rem;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(178, 176, 247, 0.4) 20%,
+      transparent 60%
+    );
+  }
+
+  .interview-Qn-card-img {
+    width: 34rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+  .flash-card-img {
+    width: 20rem;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(0, 255, 0, 0.5) 0%,
+      transparent 60%
+    );
+  }
+
+  .quiz-card-img {
+    width: 20rem;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(63, 197, 226, 0.4) 0%,
+      transparent 60%
+    );
+  }
+
+  .practice-Qn-card-img {
+    height: 20rem;
+    width: 30rem;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(178, 176, 247, 0.4) 20%,
+      transparent 60%
+    );
+  }
+
+  .interview-Qn-card-img {
+    width: 28rem;
+  }
+
+  .flash-card-features {
+    min-height: 20rem;
+    max-width: 25rem;
+    padding: 5rem 1.7rem 0rem 2.3rem;
+    /* padding-top: 5rem; */
+    line-height: 1.4125rem;
+    overflow: hidden;
+  }
+
+  .flash-card-features h2 {
+    line-height: 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .flash-card-img {
+    height: 18rem;
+    width: 18rem;
+    margin-top: 8rem;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(0, 255, 0, 0.5) 0%,
+      transparent 60%
+    );
+  }
+
+  .quiz-card-img {
+    height: 18rem;
+    width: 18rem;
+    margin-top: 10rem;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(63, 197, 226, 0.4) 0%,
+      transparent 60%
+    );
+  }
+
+  .practice-Qn-card-img {
+    height: 20rem;
+    width: 30rem;
+    margin-top: 4rem;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(178, 176, 247, 0.4) 20%,
+      transparent 60%
+    );
+  }
+
+  .interview-Qn-card-img {
+    width: 20rem;
+    margin-top: 8rem;
+  }
+
+  .flash-card-features {
+    min-height: 20rem;
+    max-width: 20rem;
+    padding: 5rem 1.7rem 0rem 2.3rem;
+    /* padding-top: 5rem; */
+    line-height: 1.4125rem;
+    overflow: hidden;
+  }
+
+  .flash-card-features p li {
+    font-size: 0.875rem;
+  }
+
+  .flash-card-features h2 {
+    line-height: 2.5rem;
   }
 }

@@ -7,7 +7,15 @@ p {
   justify-content: space-between;
   padding: 0.3125rem 0rem;
   background-color: #2a2a2a;
-  color: white;
+  color: #fefefe;
+  font-family: "Hind", sans-serif;
+}
+
+.product-logo {
+  height: 6.625rem;
+  width: 25.375rem;
+  margin-left: 3rem;
+  cursor: pointer;
 }
 
 .navbar-elements {
@@ -19,11 +27,6 @@ p {
 
 .navbar-dropdown {
   gap: 0.3125rem;
-}
-
-.navbar-dropdown > p > img {
-  height: 0.5rem;
-  width: 0.9769rem;
 }
 
 .learn-dropdown {
@@ -58,22 +61,23 @@ p {
 
 .dropdown-text > h5 {
   margin: 0rem;
+  font-size: 1rem;
 }
 
 .dropdown-text > p {
   word-break: normal;
   margin-top: 0.625rem;
-  font-size: 0.6875rem;
+  font-size: 14px;
 }
 
 .btn {
-  height: 2rem;
-  width: 6rem;
-  padding: 0 0.3rem;
-  border-radius: 0.5rem;
-  background-color: white;
-  color: black;
+  display: flex;
+  padding: 0rem 1.3rem;
+  align-items: flex-start;
+  gap: 0.625rem;
   cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: 500;
 }
 
 /* Sign up button pop-up */
@@ -81,15 +85,19 @@ p {
 .pop-up {
   position: absolute;
   right: 6.25rem;
-  top: 4.75rem;
-  height: 1.7rem;
-  width: 15.825rem;
+  top: 6rem;
+  height: 2.3rem;
+  width: 17.825rem;
   max-width: 100%;
   padding: 0.7rem 1rem 1.5rem;
   border-radius: 0.75rem;
   background-color: white;
   color: black;
-  font-size: 14px;
+  font-size: 1.125rem;
+}
+
+b {
+  font-weight: bold;
 }
 
 .shape {
@@ -117,22 +125,23 @@ p {
   padding: 1rem 1rem;
   background-color: #2a2a2a;
   color: white;
-  box-shadow: 0px 1px 2px 0px #AEACAC;
+  box-shadow: 0px 1px 2px 0px #aeacac;
+  font-family: "Hind", sans-serif;
   display: none;
 }
 
 .mobile-btn {
-  height: 1.5rem;
+  height: 1.7rem;
   width: 3.75rem;
   padding: 0.125rem 0.625rem;
   font-size: 0.9rem;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
 }
 
 .mobile-pop-up {
   position: absolute;
   right: 0.5rem;
-  top: 3.30rem;
+  top: 3.3rem;
   height: 1.3rem;
   width: 11.825rem;
   max-width: 100%;
@@ -154,8 +163,8 @@ p {
 }
 
 .mobile-pop-up img {
-  height: .9375rem;
-  width: .9375rem;
+  height: 0.9375rem;
+  width: 0.9375rem;
   margin-right: 0.4rem;
   cursor: pointer;
 }
@@ -188,5 +197,64 @@ p {
     height: 50px;
     width: 40px;
     max-width: 100%;
+  }
+}
+
+/* Font-styling in Desktop */
+
+.learn-text {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: normal;
+  font-style: normal;
+}
+
+.login-text {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.4125rem;
+  color: #d9d9d9;
+  font-style: normal;
+}
+
+.mobile-shape span {
+  font-size: 0.9375rem;
+}
+
+/* Sizing in Desktop */
+
+.learn-img {
+  height: 0.8rem;
+  width: 0.8rem;
+  stroke-width: 4px;
+  stroke: #fefefe;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1020px) {
+  .learn-text,
+  .login-text {
+    font-size: 1rem;
+  }
+
+  .learn-img {
+    height: 0.5rem;
+    width: 0.5rem;
+  }
+
+  .btn {
+    display: flex;
+    padding: 0rem 0.6rem;
+    align-items: flex-start;
+    gap: 0.625rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    width: 5rem;
+  }
+
+  .product-logo {
+    height: 80px;
+    width: 300px;
+    margin-left: 1rem;
   }
 }

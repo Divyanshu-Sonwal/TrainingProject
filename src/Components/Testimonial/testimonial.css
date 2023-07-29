@@ -1,6 +1,7 @@
 .testimonial-container {
   background: #2a2a2a;
   padding-top: 2rem;
+  margin-top: 0rem;
   color: white;
   text-align: center;
 }
@@ -10,10 +11,50 @@
   justify-content: space-evenly;
 }
 
+.desktop-explore-container h2 {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: #d9d9d9;
+  font-size: 2.7rem;
+}
+
+.desktop-explore-container p {
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: #d9d9d9;
+}
+
+.desktop-heading {
+  color: #d9d9d9;
+  font-family: "Inter", sans-serif;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
 .testimonial-boxes {
   display: flex;
   justify-content: center;
   padding: 2rem 0rem;
+}
+
+.desktop-testimonial-section {
+  padding-top: 2rem;
+}
+
+.desktop-testimonial-section h2 {
+  font-size: 27px;
+  font-family: "Inter", sans-serif;
+  color: #d9d9d9;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .mobile-testimonial-section {
@@ -75,14 +116,17 @@
 
 .product-management-container {
   display: flex;
+  /* align-items: center; */
   max-width: 65rem;
   margin: 0 auto;
 }
 
 .product-management-text {
+  display: flex;
+  flex-direction: column;
   height: auto;
   max-width: 25.1875rem;
-  padding: 2rem 2rem 0rem;
+  padding: 5rem 2rem 0rem;
   text-align: start;
   overflow: hidden;
 }
@@ -97,17 +141,28 @@
   max-width: 100%;
 }
 
+.product-manager-heading {
+  margin-bottom: 2rem;
+}
+
 .mobile-paragraph-text {
-  font-family: Inter;
+  font-family: "Inter", sans-serif;
+  color: #d9d9d9;
   font-style: normal;
-  font-size: 18px;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .journey-text {
   margin-bottom: 0rem;
   margin-top: 0rem;
-  font-weight: 700;
   font-size: 2rem;
+  color: #d9d9d9;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .journey-text-container {
@@ -122,14 +177,14 @@
 
 .mobile-explore-container h2 {
   font-size: 35px;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   color: "#FEFEFE";
   margin-top: "0rem";
 }
 
 .mobile-testimonial-section h2 {
   font-size: 25px;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   color: #fefefe;
 }
 
@@ -146,7 +201,7 @@
 }
 
 .register-btn {
-  margin-top: .625rem;
+  margin-top: 0.625rem;
   font-weight: 600;
   font-size: 22px;
   background-color: white;
@@ -169,16 +224,6 @@
 
 /* Responsiveness */
 @media only screen and (max-width: 768px) {
-  .mobile-explore-container,
-  .mobile-testimonial-section {
-    display: block;
-  }
-
-  .desktop-explore-container,
-  .desktop-testimonial-section {
-    display: none;
-  }
-
   .woman-icon {
     height: 8rem;
     width: 8rem;
@@ -190,7 +235,15 @@
   }
 
   .mobile-start-btn {
-    padding: 5px 5px;
+    padding: 0.3125rem 0.3125rem;
+  }
+
+  .mobile-paragraph-text {
+    color: #fefefe;
+    font-family: 'Hind', sans-serif;
+    font-size: .75rem;
+    font-style: normal;
+    font-weight: 400;
   }
 
   .product-management-container {
@@ -198,17 +251,18 @@
   }
 
   .product-management-text {
-    margin-left: 1rem;
+    margin: 0 auto;
+    padding: 0rem 2rem 0rem;
   }
 
   .product-management-text > h3 {
-    font-size: 28px;
-    font-weight: 600;
+    font-size: 1.5rem;
+    font-weight: 500;
   }
 
   .product-management-text > p {
     margin-top: 0;
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   .product-management-text > .mobile-heading {
@@ -228,19 +282,25 @@
   }
 
   .product-manager-heading {
-    font-size: 25px;
-    font-family: Poppins;
+    font-size: 1.5625rem;
+    font-family: "Poppins", sans-serif;
+    line-height: 0;
+    margin-top: 4rem;
+  }
+
+  .product-manager-specific-heading {
+    margin-bottom: 0rem;
   }
 
   .journey-text-container {
     padding: 1rem 2rem;
-    background: #655F5F;
+    background: #655f5f;
   }
 
   .journey-text {
     font-size: 26px;
     font-weight: 600;
-    font-style: Poppins;
+    font-style: "Poppins", sans-serif;
     margin-top: 0rem;
   }
 
@@ -250,10 +310,30 @@
   }
 }
 
+@media only screen and (max-width: 945px) {
+  .mobile-explore-container,
+  .mobile-testimonial-section {
+    display: block;
+  }
+
+  .desktop-explore-container,
+  .desktop-testimonial-section {
+    display: none;
+  }
+
+  .product-management-container {
+    display: block;
+  }
+
+  .product-management-text {
+    margin: 0 auto;
+  }
+}
+
 @media only screen and (max-width: 376px) {
   .mobile-start-btn {
     padding: 5px 5px;
-    font-size: .6875rem;
+    font-size: 0.6875rem;
   }
 
   .product-management-text > h3 {
