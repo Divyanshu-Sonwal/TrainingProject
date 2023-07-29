@@ -23,15 +23,19 @@ function Navbar() {
       <img
         src={logo}
         alt="product-logo"
-        style={{ height: "5.625rem", width: "25.375rem", cursor: "pointer"}}
+        style={{ height: "5.625rem", width: "25.375rem", cursor: "pointer" }}
       />
       <div className="navbar-elements">
-        <div className="navbar-dropdown" onClick={changeVisibility1} onMouseLeave={()=>setVisibility1(false)}>
+        <div
+          className="navbar-dropdown"
+          onClick={changeVisibility1}
+          onMouseLeave={() => setVisibility1(false)}
+        >
           <p>
             Learn <img src={dropDownIcon} alt="dropDownIcon" />
           </p>
           {visibility1 && (
-            <div className="learn-dropdown" >
+            <div className="learn-dropdown">
               <img src={flashCardIcon} alt="flashCardIcon" />
               <div className="dropdown-text">
                 <h5>Flash Cards and Quizzes</h5>
@@ -42,7 +46,11 @@ function Navbar() {
             </div>
           )}
         </div>
-        <div className="navbar-dropdown" onClick={changeVisibility2} onMouseLeave={()=>setVisibility2(false)}>
+        <div
+          className="navbar-dropdown"
+          onClick={changeVisibility2}
+          onMouseLeave={() => setVisibility2(false)}
+        >
           <p>
             Practice <img src={dropDownIcon} alt="dropDownIcon" />
           </p>
@@ -72,7 +80,7 @@ function Navbar() {
           )}
         </div>
         <p>Login</p>
-        <button  className="btn">Sign up</button>
+          <button className="btn">Sign up</button>
       </div>
     </div>
   );

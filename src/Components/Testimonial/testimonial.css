@@ -5,7 +5,7 @@
   text-align: center;
 }
 
-.explore-container {
+.desktop-explore-container {
   display: flex;
   justify-content: space-evenly;
 }
@@ -16,23 +16,32 @@
   padding: 2rem 0rem;
 }
 
+.mobile-testimonial-section {
+  display: none;
+}
+
 .testimonial-element {
-  height: 19rem;
-  width: 16.25rem;
-  background-color: #D9D9D9;
+  height: auto;
+  max-width: 16.25rem;
+  background-color: #d9d9d9;
   border-radius: 1rem;
   padding: 1rem 1rem 0.5rem;
   color: black;
-  font-size: .8125rem;
+  font-size: 0.8125rem;
   overflow: hidden;
   margin: 0rem 1.5rem;
+}
+
+.testimonial-element p {
+  word-break: break-word;
+  /* margin-top: 0rem; */
 }
 
 .testimonial-element img {
   height: 3.125rem;
   width: 3.125rem;
   border-radius: 50%;
-  margin: 0rem .7rem;
+  margin: 0rem 0.7rem;
   object-fit: cover;
 }
 
@@ -42,6 +51,8 @@
 
 .woman-icon {
   position: relative;
+  width: 16rem;
+  max-width: 100%;
   background: radial-gradient(
     circle at center,
     rgba(61, 199, 39, 0.5) 20%,
@@ -52,10 +63,242 @@
 
 .man-icon {
   position: relative;
+  width: 16rem;
+  max-width: 100%;
   background: radial-gradient(
     ellipse at center,
-    rgba(218, 124, 9, 0.40) 40%,
+    rgba(218, 124, 9, 0.4) 40%,
     transparent 70%
   );
   overflow: "hidden";
+}
+
+.product-management-container {
+  display: flex;
+  max-width: 65rem;
+  margin: 0 auto;
+}
+
+.product-management-text {
+  height: auto;
+  max-width: 25.1875rem;
+  padding: 2rem 2rem 0rem;
+  text-align: start;
+  overflow: hidden;
+}
+
+.product-management-img {
+  padding: 3.5rem 1rem 2rem 4rem;
+}
+
+.product-management-img > img {
+  height: auto;
+  width: 30rem;
+  max-width: 100%;
+}
+
+.mobile-paragraph-text {
+  font-family: Inter;
+  font-style: normal;
+  font-size: 18px;
+}
+
+.journey-text {
+  margin-bottom: 0rem;
+  margin-top: 0rem;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.journey-text-container {
+  margin-top: 3rem;
+}
+
+/* For Mobile Screen */
+
+.mobile-explore-container {
+  display: none;
+}
+
+.mobile-explore-container h2 {
+  font-size: 35px;
+  font-family: Poppins;
+  color: "#FEFEFE";
+  margin-top: "0rem";
+}
+
+.mobile-testimonial-section h2 {
+  font-size: 25px;
+  font-family: Poppins;
+  color: #fefefe;
+}
+
+.mobile-flow-chart-icon {
+  height: 38rem;
+  width: 50rem;
+  max-width: 100%;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.register-btn {
+  margin-top: .625rem;
+  font-weight: 600;
+  font-size: 22px;
+  background-color: white;
+  color: black;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1),
+    0px 6px 12px 0px rgba(0, 0, 0, 0.1), 0px 22px 22px 0px rgba(0, 0, 0, 0.09),
+    0px 50px 30px 0px rgba(0, 0, 0, 0.05), 0px 89px 36px 0px rgba(0, 0, 0, 0.01),
+    0px 139px 39px 0px rgba(0, 0, 0, 0);
+}
+
+.mobile-start-btn {
+  background-color: white;
+  color: black;
+  max-width: 100%;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1),
+    0px 6px 12px 0px rgba(0, 0, 0, 0.1), 0px 22px 22px 0px rgba(0, 0, 0, 0.09),
+    0px 50px 30px 0px rgba(0, 0, 0, 0.05), 0px 89px 36px 0px rgba(0, 0, 0, 0.01),
+    0px 139px 39px 0px rgba(0, 0, 0, 0);
+}
+
+/* Responsiveness */
+@media only screen and (max-width: 768px) {
+  .mobile-explore-container,
+  .mobile-testimonial-section {
+    display: block;
+  }
+
+  .desktop-explore-container,
+  .desktop-testimonial-section {
+    display: none;
+  }
+
+  .woman-icon {
+    height: 8rem;
+    width: 8rem;
+  }
+
+  .man-icon {
+    height: 8rem;
+    width: 8rem;
+  }
+
+  .mobile-start-btn {
+    padding: 5px 5px;
+  }
+
+  .product-management-container {
+    display: block;
+  }
+
+  .product-management-text {
+    margin-left: 1rem;
+  }
+
+  .product-management-text > h3 {
+    font-size: 28px;
+    font-weight: 600;
+  }
+
+  .product-management-text > p {
+    margin-top: 0;
+    font-size: 16px;
+  }
+
+  .product-management-text > .mobile-heading {
+    text-align: center;
+  }
+
+  .product-management-img {
+    padding: 0rem 2rem;
+  }
+
+  .product-management-img p {
+    font-size: 12px;
+  }
+
+  .product-management-img > img {
+    width: 18rem;
+  }
+
+  .product-manager-heading {
+    font-size: 25px;
+    font-family: Poppins;
+  }
+
+  .journey-text-container {
+    padding: 1rem 2rem;
+    background: #655F5F;
+  }
+
+  .journey-text {
+    font-size: 26px;
+    font-weight: 600;
+    font-style: Poppins;
+    margin-top: 0rem;
+  }
+
+  .register-btn {
+    border-radius: 8px;
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  .mobile-start-btn {
+    padding: 5px 5px;
+    font-size: .6875rem;
+  }
+
+  .product-management-text > h3 {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .product-management-img > img {
+    width: 16rem;
+  }
+
+  .mobile-flow-chart-icon {
+    height: 35rem;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .mobile-explore-container h2 {
+    font-size: 30px;
+  }
+
+  .woman-icon {
+    height: 6rem;
+    width: 6rem;
+  }
+
+  .man-icon {
+    height: 6rem;
+    width: 6rem;
+  }
+
+  .testimonial-element {
+    max-width: 12.25rem;
+  }
+
+  .product-management-text > h3 {
+    font-size: 19.5px;
+    font-weight: 600;
+  }
+
+  .product-management-img > img {
+    width: 13rem;
+  }
+
+  .mobile-flow-chart-icon {
+    height: 30rem;
+  }
 }

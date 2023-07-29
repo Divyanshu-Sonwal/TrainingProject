@@ -1,20 +1,32 @@
-.features {
-  /* width: 100vw; */
+.mobile-features {
   background: #2a2a2a;
   backdrop-filter: blur(50px);
   color: white;
 }
 
+.desktop-features {
+  background: #2a2a2a;
+  backdrop-filter: blur(50px);
+  color: white;
+}
+
+.desktop-features-section {
+  display: flex;
+  justify-content: space-around;
+}
+
 .flash-card-features {
-  min-height: 381px;
-  max-width: 480px;
+  min-height: 23.8125rem;
+  max-width: 30rem;
   padding-top: 5rem;
   padding-left: 1rem;
   line-height: 1.4125rem;
+  overflow: hidden;
 }
 
 .flash-card-features > p {
   font-size: 0.9375rem;
+  word-wrap: break-word;
 }
 
 /* Background Effect on Card Images */
@@ -22,7 +34,8 @@
 .flash-card-img {
   position: relative;
   height: 25rem;
-  max-width: 28.125rem;
+  width: 28.125rem;
+  max-width: 100%;
   background: radial-gradient(
     ellipse at center,
     rgba(0, 255, 0, 0.5) 0%,
@@ -34,7 +47,8 @@
 .quiz-card-img {
   position: relative;
   height: 25rem;
-  max-width: 28.125rem;
+  width: 28.125rem;
+  max-width: 100%;
   background: radial-gradient(
     ellipse at center,
     rgba(63, 197, 226, 0.4) 0%,
@@ -43,23 +57,166 @@
   overflow: "hidden"; /* Ensure that the content is clipped to the rounded shape */
 }
 
-.practiceQn-card-img {
+.practice-Qn-card-img {
   position: relative;
+  height: 12rem;
+  max-width: 100%;
   background: radial-gradient(
     ellipse at center,
-    rgba(178, 176, 247, 0.40) 30%,
+    rgba(178, 176, 247, 0.4) 30%,
     transparent 72%
   );
   overflow: "hidden"; /* Ensure that the content is clipped to the rounded shape */
 }
 
-.interviewQn-card-img {
+.interview-Qn-card-img {
   position: relative;
   height: 12rem;
+  max-width: 100%;
   background: radial-gradient(
     ellipse at center,
-    rgba(43, 38, 192, 0.40) 50%,
+    rgba(43, 38, 192, 0.4) 50%,
     transparent 75%
   );
   overflow: "hidden"; /* Ensure that the content is clipped to the rounded shape */
+}
+
+h2 {
+  font-size: 2.2rem;
+  font-family: Poppins;
+  margin-bottom: 0rem;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 1.5625rem;
+  font-family: Poppins;
+  margin-bottom: 0rem;
+  font-weight: 500;
+}
+
+li {
+  font-size: 0.8125rem;
+}
+
+/* For Mobile Screen */
+.mobile-heading-container {
+  text-align: center;
+  display: none;
+}
+
+.mobile-features {
+  display: none;
+}
+
+.mobile-heading-container p {
+  margin: 0;
+  font-size: 2.1875rem;
+  font-family: Poppins;
+}
+
+.card-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flash-card-heading-section {
+  min-height: 15rem;
+  max-width: 20rem;
+  padding: 1rem 0rem 0rem 1rem;
+  line-height: 1.4125rem;
+  overflow: hidden;
+  font-size: 0.875rem;
+}
+
+.flash-card-heading-section p {
+  word-wrap: break-word;
+}
+
+.flash-card-features-section {
+  min-height: 15rem;
+  max-width: 21rem;
+  padding: 0rem 0.7rem 0rem 2.3rem;
+  line-height: 1.4125rem;
+  overflow: hidden;
+}
+
+/* Responsiveness */
+@media only screen and (max-width: 500px) {
+  .desktop-features {
+    display: none;
+  }
+
+  .mobile-features {
+    display: block;
+  }
+
+  .mobile-heading-container {
+    display: block;
+  }
+
+  .flash-card-img {
+    height: 20rem;
+    width: 20rem;
+  }
+
+  .quiz-card-img {
+    height: 16rem;
+    width: 20rem;
+  }
+
+  .practice-Qn-card-img {
+    width: 24rem;
+    background: radial-gradient(
+    ellipse at center,
+    rgba(178, 176, 247, 0.4) 20%,
+    transparent 72%
+  );
+  }
+
+  .interview-Qn-card-img {
+    width: 21rem;
+  }
+
+  /* .cards-container {
+    display: flex;
+    justify-content: center;
+  } */
+
+  .start-btn {
+    width: 15rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  .flash-card-features-section {
+    padding: 0rem 2rem 0rem 1.7rem;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .flash-card-img {
+    height: 15rem;
+    width: 15rem;
+  }
+
+  .quiz-card-img {
+    height: 11rem;
+    width: 15rem;
+  }
+
+  .interview-Qn-card-img {
+    width: 17rem;
+  }
+
+  .flash-card-heading-section p {
+    word-wrap: break-word;
+    max-width: 17rem;
+  }
+
+  li {
+    font-size: 0.7188rem;
+  }
 }

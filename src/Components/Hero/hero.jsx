@@ -83,8 +83,18 @@ function Hero() {
   return (
     <div className="flash-page">
       <div className="heading" style={{ paddingTop: "2rem" }}>
-        <p>Empower Your Product Vision: Master the Art of</p>
-        <p>Product Management with </p>
+        {/* Mobile headings -> only need to be displayed in mobile screen */}
+        <p className="mobile-heading">Empower Your Product</p>
+        <p className="mobile-heading">Vision:</p>
+        <p className="mobile-heading">Master the Art of Product</p>
+        <p className="mobile-heading">Management with</p>
+
+        {/* Desktop heading -> need to be displayed other than mobile screens */}
+        <p className="desktop-heading">
+          Empower Your Product Vision: Master the Art of
+        </p>
+
+        <p className="desktop-heading">Product Management with </p>
         <p className="animate-text">
           <span style={{ color: "#FD443A" }}>Flash Cards</span>
           <span style={{ color: "#FD443A" }}>Quizzes</span>
@@ -96,13 +106,20 @@ function Hero() {
         Get Started
       </button>
       <div className="mid-text" style={{ paddingTop: "0.75rem" }}>
-        <p>Ready to Supercharge Your Product</p>
-        <p>Management? Discover the Power of Our Learning</p>
+        {/* Mobile headings -> only need to be displayed in mobile screen */}
+        <p className="mobile-heading">Ready to Supercharge Your</p>
+        <p className="mobile-heading">Product Management?</p>
+        <p className="mobile-heading">Discover the Power of Our Learning</p>
+
+        {/* Desktop heading -> need to be displayed other than mobile screens */}
+        <p className="desktop-heading">Ready to Supercharge Your Product</p>
+        <p className="desktop-heading">Management? Discover the Power of Our Learning</p>
+
         <p>Modules!</p>
       </div>
       <div className="flash-page-last-section">
         <div className="box-container">
-          <div style={{ display: "flex", justifyContent: "center" }}>
+          <div className="card-container">
             <div onClick={() => setImgSrc("flash-card")}>
               <img
                 src={imgSrc === "flash-card" ? FlashCardsBox : FlashCardBox2}
@@ -162,19 +179,21 @@ function Hero() {
             )
           )}
         </div>
-        <img
-          src={
-            imgSrc === "flash-card"
-              ? FlashLaptopIcon
-              : imgSrc === "quiz-card"
-              ? QuizLaptopIcon
-              : imgSrc === "practiceQn-card"
-              ? PracticeQnLaptopIcon
-              : InterviewQnLaptopIcon
-          }
-          alt="LaptopIcon"
-          style={{ height: "16.625rem", maxWidth: "24rem", marginLeft: "2rem" }}
-        />
+        <div className="laptop-container">
+          <img
+            src={
+              imgSrc === "flash-card"
+                ? FlashLaptopIcon
+                : imgSrc === "quiz-card"
+                ? QuizLaptopIcon
+                : imgSrc === "practiceQn-card"
+                ? PracticeQnLaptopIcon
+                : InterviewQnLaptopIcon
+            }
+            className="laptop-icon"
+            alt="LaptopIcon"
+          />
+        </div>
       </div>
 
       {/* Filler Div for BackgroundColor */}

@@ -1,6 +1,7 @@
 // import { useState } from 'react'
 // import './App.css'
-import Navbar from "./Layouts/Navbar/navbar";
+// import Navbar from "./Layouts/Navbar/navbar";
+import CampusNavbar from "./Layouts/Navbar/campusNavbar";
 import Hero from "./Components/Hero/hero";
 import Features from "./Components/Features/features";
 import Testimonial from "./Components/Testimonial/testimonial";
@@ -10,7 +11,8 @@ function App() {
 
   return (
     <>
-      <Navbar/>
+      <CampusNavbar/>
+      {/* <Navbar/> */}
       <Hero/>
       <Features/>
       <Testimonial/>
